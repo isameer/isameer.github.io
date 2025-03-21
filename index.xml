@@ -6,7 +6,116 @@
     <description>Recent content on Sameer Indarapu</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 11:54:20 -0700</lastBuildDate>
     <atom:link href="https://isameer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hands On Large Language Models</title>
+      <link>https://isameer.github.io/books/hands_on_llms/</link>
+      <pubDate>Fri, 21 Mar 2025 11:54:20 -0700</pubDate>
+      <guid>https://isameer.github.io/books/hands_on_llms/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A good handbook/manual that biases towards the how over the why, i.e., not a textbook.&lt;/li&gt;
+&lt;li&gt;Easier to read if you already know some ML.&lt;/li&gt;
+&lt;li&gt;A bit overboard on the illustrations.&lt;/li&gt;
+&lt;li&gt;A great candidate for an online book that updates often. e.g., the RLHF section already feels a bit outdated.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;understanding-language-models&#34;&gt;Understanding Language Models&lt;/h2&gt;
+&lt;h3 id=&#34;introduction-to-llms&#34;&gt;Introduction to LLMs&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Describes historical context and progress of work towards the current (2024) state.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www-formal.stanford.edu/jmc/whatisai.pdf&#34;&gt;What is Artificial Intelligence - John McCarthy (2007)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1301.3781&#34;&gt;word2vec (2013)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1409.0473&#34;&gt;paper that introduced attention (2014)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34;&gt;Attention Is All You Need (2017)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1810.04805&#34;&gt;BERT (2018)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openai.com/index/language-unsupervised/&#34;&gt;GPT-1 (2018)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openai.com/index/better-language-models/&#34;&gt;GPT-2 (2019)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2005.14165&#34;&gt;GPT-3 (2020)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2303.08774&#34;&gt;GPT-4 (2023)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2307.09288&#34;&gt;Llama 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;tokens-and-embeddings&#34;&gt;Tokens and Embeddings&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Tokenization levels: words, sub-words, characters and bytes.&lt;/li&gt;
+&lt;li&gt;Considerations: vocabulary size, special tokens (start, end, padding, mask), capitalization, whitespace sensitivity (e.g. for coding)&lt;/li&gt;
+&lt;li&gt;Token vs. sentence/doc embeddings: The embedding of the last token is &lt;strong&gt;not&lt;/strong&gt; a good doc/sentence embedding&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;looking-inside-llms&#34;&gt;Looking Inside LLMs&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://kipp.ly/transformer-inference-arithmetic/&#34;&gt;kv-caching&lt;/a&gt; for speeding up inference&lt;/li&gt;
+&lt;li&gt;Speeding up attention: &lt;a href=&#34;https://arxiv.org/abs/1904.10509&#34;&gt;Sparse transformers (2019)&lt;/a&gt;,&lt;a href=&#34;https://arxiv.org/abs/2004.05150&#34;&gt;Longformer - sliding window attention (2020)&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/1911.02150&#34;&gt;multi-query attention (2019)&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/2305.13245&#34;&gt;grouped-query attention (2023)&lt;/a&gt;, &lt;a href=&#34;https://arxiv.org/abs/2205.14135&#34;&gt;Flash Attention (2022)&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2104.09864&#34;&gt;Positional Embeddings (RoPE) (2021)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Packing multiple documents into a single context - &lt;a href=&#34;https://arxiv.org/abs/2107.02027&#34;&gt;https://arxiv.org/abs/2107.02027&lt;/a&gt; and &lt;a href=&#34;https://www.graphcore.ai/posts/introducing-packed-bert-for-2x-faster-training-in-natural-language-processing&#34;&gt;Packed BERT&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;using-pretrained-language-models&#34;&gt;Using Pretrained Language Models&lt;/h2&gt;
+&lt;h3 id=&#34;text-classification&#34;&gt;Text classification&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Only covers using pretrained models.&lt;/li&gt;
+&lt;li&gt;Start at &lt;a href=&#34;https://huggingface.co/mteb&#34;&gt;Hugging Face&amp;rsquo;s Massive Text Embedding (MTEB)&lt;/a&gt; &lt;a href=&#34;https://huggingface.co/spaces/mteb/leaderboard&#34;&gt;leaderboard&lt;/a&gt; has lots of models benchmarked across several tasks plus metadata on model size.&lt;/li&gt;
+&lt;li&gt;Option 1: Find a model that is already trained for your classification task, e.g. RoBERTa for sentiment classification.&lt;/li&gt;
+&lt;li&gt;Option 2: Get embeddings from a pre-trained embeddings model, e.g. from &lt;a href=&#34;https://huggingface.co/sentence-transformers&#34;&gt;sentence-transformers&lt;/a&gt;, and train a classifier using the embedding as a feature vector. Equivalent to fine-tuning.&lt;/li&gt;
+&lt;li&gt;Option 2.5: Zero-shot with embeddings of the labels. e.g. for a movie `M` with embedding `e(M)`, compute cosine similarity of `e(M)` to `e(&amp;ldquo;this is a positive movie review&amp;rdquo;)` and `e(&amp;ldquo;this is a negative movie review&amp;rdquo;)`. Surprisingly, this works reasonably well (0.78 f1-score vs 0.85 for option 2 above) on a movie review sentiment classification task. Code &lt;a href=&#34;https://github.com/HandsOnLLM/Hands-On-Large-Language-Models/tree/main/chapter04&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Option 3: Ask an instruction fine-tuned generative model, e.g. &lt;a href=&#34;https://arxiv.org/abs/2210.11416&#34;&gt;Flan-T5&lt;/a&gt; trained by using instruction fine-tuning &lt;a href=&#34;https://arxiv.org/abs/1910.10683&#34;&gt;T5 (encoder-decoder)&lt;/a&gt;. &amp;ldquo;Is the following sentence positive or negative? &lt;!-- raw HTML omitted --&gt;&amp;rdquo; gives an f1-score of 0.84. Same with gpt-3.5 gives an f-1 score of 0.91.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;text-clustering-and-topic-modeling&#34;&gt;Text clustering and topic modeling&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate embeddings for docs with a model from &lt;a href=&#34;https://huggingface.co/mteb&#34;&gt;Hugging Face&amp;rsquo;s Massive Text Embedding (MTEB)&lt;/a&gt; &lt;a href=&#34;https://huggingface.co/spaces/mteb/leaderboard&#34;&gt;leaderboard&lt;/a&gt;, project to a lower dimension using PCA/UMAP and cluster using k-means/HDBSCAN.&lt;/li&gt;
+&lt;li&gt;BERTopic: Various algorithms to generate topic representations on top of clusters.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;prompt-engineering&#34;&gt;Prompt engineering&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In-context learning: Give 1 or more examples in the prompt.&lt;/li&gt;
+&lt;li&gt;Chain prompting: Manually break up the task into multiple steps and chain outputs/inputs, e.g. to output a book, prompt with a topic to output a title, prompt with the generated title to output a summary, and prompt with the summary to output a book.&lt;/li&gt;
+&lt;li&gt;Chain-of-thought: (1) give reasoning example(s) in the prompt; (2) prompt with &amp;ldquo;let&amp;rsquo;s think step-by-step&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Self-consistency: Sample multiple outputs and pick the majority/most popular.&lt;/li&gt;
+&lt;li&gt;Tree-of-thought: multiple steps of reasoning and verification or pretend to have a conversation between multiple experts&lt;/li&gt;
+&lt;li&gt;output validation: constraint output format using a prompt or by restricting the output tokens during sampling (see Guidance, Guardrails and LMQL).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;advanced-text-generation-techniques&#34;&gt;Advanced Text Generation Techniques&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Using quantized models in &lt;a href=&#34;https://huggingface.co/docs/hub/en/gguf&#34;&gt;GGUF&lt;/a&gt; format.&lt;/li&gt;
+&lt;li&gt;Chaining LLM calls with &lt;a href=&#34;https://python.langchain.com/docs/introduction/&#34;&gt;LangChain&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Adding memory with full conversation buffers or conversation summaries.&lt;/li&gt;
+&lt;li&gt;Tool usage with ReAct in LangChain (already deprecated!).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;semantic-search-and-retrieval-augmented-generation-rag&#34;&gt;Semantic Search and Retrieval-Augmented Generation (RAG)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Dense retrieval: Chunk document, get embeddings for each chunk, embed the query, and find the closest chunks. Use FAISS/Annoy to scale up nearest-neighbor searches.&lt;/li&gt;
+&lt;li&gt;Re-ranking: Concat query and doc and pass as inputs to an encoder-style model trained to output 0/1 relevance scores.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2005.11401&#34;&gt;RAG&lt;/a&gt;: Find relevant docs/chunks using embedding search, include them in the prompt and instruct an LLM to refer to them and/or cite.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;multimodal-llms&#34;&gt;Multimodal LLMs&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2010.11929&#34;&gt;ViT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2103.00020&#34;&gt;CLIP&lt;/a&gt; - multimodal embeddings. Also, OpenCLIP.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2301.12597&#34;&gt;BLIP-2&lt;/a&gt; - multimodal (input) generator. Use for image captioning and queries about images.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;training-and-fine-tuning-language-models&#34;&gt;Training and Fine-Tuning Language Models&lt;/h2&gt;
+&lt;h3 id=&#34;creating-text-embedding-models&#34;&gt;Creating Text Embedding Models&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1908.10084&#34;&gt;Sentence-BERT/SBERT&lt;/a&gt; - 2-tower/Siamese network for contrastive learning of embeddings. Prior art was a cross-encoder but that is clearly much more expensive. &amp;ldquo;A solution to this overhead is to generate embeddings from a BERT model by averaging its output layer or using the [CLS] token. This, however, has shown to be worse than simply averaging word vectors like GloVe&amp;rdquo;. - Interesting claim. SBERT uses mean pooling. Why isn&amp;rsquo;t this a problem?&lt;/li&gt;
+&lt;li&gt;Training an embedding model - Fairly straightforward. Some choices of loss functions.&lt;/li&gt;
+&lt;li&gt;Fine-tuning: Same as (2) but start with a pretrained embedding model.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2010.08240&#34;&gt;Augmented SBERT&lt;/a&gt;: Generate training labels for an SBERT style model using a cross-encoder model.&lt;/li&gt;
+&lt;li&gt;Unsupervised training to learn embeddings - &lt;a href=&#34;https://arxiv.org/abs/2104.06979&#34;&gt;TSDAE&lt;/a&gt; uses a setup very similar to masked language modeling but the decoder only gets to see a (pooled) sentence embedding instead of token embeddings. Can be adapted to a domain but doing a supervised fine-tuning round on top of a pretrained model.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;fine-tuning-representation-models-for-classification&#34;&gt;Fine-tuning Representation Models for Classification&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Fairly straightforward - Fine-tune a pretrained BERT model for a classification task by unfreezing one more layers.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2209.11055&#34;&gt;SetFit&lt;/a&gt;: Surprising process: (1) Make a dataset of positive and negative sentence pairs from a labeled dataset; (2) Fine-tune a Sentence Transformer on it; (3) Learn a classifier on the fine-tuned embeddings. Why would this work any better than doing (3) directly?&lt;/li&gt;
+&lt;li&gt;Fine-tuning for Named Entity Recognition: Fairly straightforward but need to carefully align the word-level entity labels with tokens.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;fine-tuning-generation-models&#34;&gt;Fine-tuning Generation Models&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Supervised Fine-tuning: Full fine-tuning and Parameter Efficient Fine-tuning using &lt;a href=&#34;https://arxiv.org/abs/1902.00751&#34;&gt;adapters&lt;/a&gt; or &lt;a href=&#34;https://arxiv.org/abs/2106.09685&#34;&gt;LoRA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Preference-tuning/Alignment/RLHF:
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1707.06347&#34;&gt;PPO&lt;/a&gt;:(1) Train a copy of the LLM to predict rewards based on a human preference dataset; (2) Fine-tune the original LLM using rewards from the reward model.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2305.18290&#34;&gt;DPO&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
   </channel>
 </rss>
